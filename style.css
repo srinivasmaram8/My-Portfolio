@@ -299,6 +299,19 @@ section {
 .about-details-container {
   display: flex;
 }
+
+#about .about-details-container > .about-containers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1.25rem;
+}
+
+#about .about-details-container > .about-containers > .details-container {
+  width: 100%;
+  min-width: 0;
+  flex: none;
+}
 .arrow {
   position: absolute;
   right: -5rem;
@@ -348,6 +361,38 @@ section {
   flex-direction: column;
 }
 
+#Skills .Skills-sub-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5em;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+#Skills .article-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  justify-content: stretch;
+  gap: 1.5rem 1rem;
+}
+
+#Skills article {
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#Skills article .icon {
+  flex: 0 0 2rem;
+}
+
+#Skills article > div {
+  min-width: 0;
+}
+
 .article-container {
   display: flex;
   text-align: initial;
@@ -380,9 +425,23 @@ article .icon {
 }
 
 .project-img {
+  display: block;
   border-radius: 2rem;
   width: 90%;
-  height: 90%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+#projects .about-containers {
+  justify-content: center;
+}
+
+#projects .about-containers > .details-container {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 38rem;
+  margin-inline: auto;
 }
 
 .project-title {
