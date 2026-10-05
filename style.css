@@ -308,6 +308,7 @@ section {
 }
 
 #about .about-details-container > .about-containers > .details-container {
+  box-sizing: border-box;
   width: 100%;
   min-width: 0;
   flex: none;
